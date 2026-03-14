@@ -15,9 +15,9 @@ port (
         rst_n   : in  std_logic
     );
 
-end entity fa_1bit_structural;  
+end entity tt_um_fa_1bit_behavioural;  
 
-architecture structural of fa_1bit_structural is  
+architecture structural of tt_um_fa_1bit_behavioural is  
 
    signal a1, a2, a3: std_logic;  
 
