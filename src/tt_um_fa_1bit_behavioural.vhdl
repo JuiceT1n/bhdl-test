@@ -22,7 +22,7 @@ architecture structural of tt_um_fa_1bit_behavioural is
    signal a1, a2, a3: std_logic;  
 
 begin  
-        un_in(7:3) := '00000'
+        un_in(7:3) := '00000';
    a1 <= ui_in(0) xor ui_in(1);  
    a2 <= ui_in(1) and ui_in(2);  
    a3 <= ui_in(0) and ui_in(2);  
