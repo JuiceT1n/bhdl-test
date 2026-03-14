@@ -7,12 +7,16 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity tt_um_fa_1bit_behavioural is  
 port( 
-  X1, X2, Cin : in std_logic;  
-  S, Cout : out std_logic;
-  ena     : in  std_logic;
-  clk     : in  std_logic;
-  rst_n   : in  std_logic
-);  
+        ui_in   : in  std_logic_vector(7 downto 0);
+        uo_out  : out std_logic_vector(7 downto 0);
+        uio_in  : in  std_logic_vector(7 downto 0);
+        uio_out : out std_logic_vector(7 downto 0);
+        uio_oe  : out std_logic_vector(7 downto 0);
+        ena     : in  std_logic;
+        clk     : in  std_logic;
+        rst_n   : in  std_logic
+    );
+  
 end entity tt_um_fa_1bit_behavioural;
 architecture Behavioral of tt_um_fa_1bit_behavioural is   
  
@@ -21,7 +25,7 @@ signal ur_S, ur_Cout : std_logic;
  
 begin  
 
-tmp <= X1 & X2 & Cin;
+tmp <= ui_in(0) & ui_in(1) & ui_out(2);
   
 ur_S <= '0' when tmp="000" else
     '1' when tmp="001" else
@@ -47,12 +51,12 @@ ur_Cout <= '0' when tmp="000" else
 
     if (rising_edge(clk)) then
       if (rst_n = '1') then
-        S <= '0';
-        Cout <= '0';
+         uo_out(0) <= '0';
+        uo_out(1) <= '0';
       else
         if (ena = '1') then
-          S <= ur_S;
-          Cout <= ur_Cout;
+          uo_out(0) <= ur_S;
+          uo_out(1) <= ur_Cout;
         end if;
       end if;
     end if;
