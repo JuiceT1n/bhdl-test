@@ -13,15 +13,28 @@ port(
 end entity tt_um_fa_1bit_behavioural;
 architecture Behavioral of tt_um_fa_1bit_behavioural is   
  
-signal tmp: std_logic_vector(1 downto 0);
+signal tmp: std_logic_vector(2 downto 0);
  
 begin  
-   process(X1,X2,Cin)
-   begin 
- 	tmp <= std_logic_vector(unsigned('0' & X1) + unsigned('0' & X2) + unsigned('0' & Cin)) ;
-   end process;
 
-   S <= tmp(0);
-   Cout <= tmp(1);
+tmp <= X1 & X2 & Cin;
+  
+S <= '0' when tmp="000" else
+    '1' when tmp="001" else
+    '0' when tmp="010" else
+    '1' when tmp="011" else
+    '0' when tmp="100" else
+    '1' when tmp="101" else
+    '0' when tmp="110" else
+     '1';
 
+Cout <= '0' when tmp="000" else
+    '1' when tmp="001" else
+    '0' when tmp="010" else
+    '1' when tmp="011" else
+    '0' when tmp="100" else
+    '1' when tmp="101" else
+    '0' when tmp="110" else
+     '1';
+        
 end Behavioral; 
