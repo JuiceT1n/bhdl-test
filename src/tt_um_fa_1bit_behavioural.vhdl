@@ -3,7 +3,7 @@
 library ieee; 
 use ieee.std_logic_1164.all;  
 
-entity fa_1bit_structural is  
+entity tt_um_fa_1bit_behavioural is  
 port (
         ui_in   : in  std_logic_vector(7 downto 0);
         uo_out  : out std_logic_vector(7 downto 0);
