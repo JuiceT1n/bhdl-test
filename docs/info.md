@@ -9,13 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
-blah
+This project is a full adder which is described behaviourally and signals are assigned to S (Sum) and Cout (Carry out) based on input combinations - i.e. a LUT. 
 
 ## How to test
 
-Explain how to use your project edit test
+This module can be tested via a golden bench with all 8 possible combinations of inputs. None were defined. 
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any bleh
+None specified
