@@ -1,10 +1,8 @@
 
 -- Code adapted from: https://www.fpga4student.com/2017/02/vhdl-code-for-full-adder.html
 -- Behavioural code for full adder 
-
-library ieee; 
-use ieee.std_logic_1164.all;  
-use IEEE.STD_LOGIC_unsigned.ALL;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 entity tt_um_fa_1bit_behavioural is  
