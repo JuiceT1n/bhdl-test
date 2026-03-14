@@ -35,8 +35,8 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: "Xou"
-  uo[1]: "D"
+  uo[0]: "S"
+  uo[1]: "Cout"
   uo[2]: ""
   uo[3]: ""
   uo[4]: ""
