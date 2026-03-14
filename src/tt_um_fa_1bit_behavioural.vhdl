@@ -25,7 +25,7 @@ signal ur_S, ur_Cout : std_logic;
  
 begin  
 
-tmp <= ui_in(0) & ui_in(1) & ui_out(2);
+tmp <= ui_in(0) & ui_in(1) & ui_in(2);
   
 ur_S <= '0' when tmp="000" else
     '1' when tmp="001" else
